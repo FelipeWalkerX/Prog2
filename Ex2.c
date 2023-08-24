@@ -24,24 +24,24 @@ enum Nacionalidade {brasileiro=1, estrangeiro};
 
 int main(){
 
-    Pessoa n, i, p, d, m, a;
+    Pessoa p1, p2, p3, p4, p5;
 
     printf("Insira seu nome: ");
-    scanf("%s", &n.nome);
+    scanf("%s", &p1.nome);
 
     printf("Insira sua idade: ");
-    scanf("%i", &i.idade);
+    scanf("%i", &p1.idade);
 
     printf("Insira seu peso: ");
-    scanf("%f", &p.peso);
+    scanf("%f", &p1.peso);
 
     printf("Insira sua data de nascimento (data/mes/ano): ");
-    scanf("%i%i%i", &d.data, &m.mes, &a.ano);
+    scanf("%i%i%i", &p1.data, &p1.mes, &p1.ano);
 
-    printf("/nNome: %s", n.nome);
-    printf("/nIdade: %i", i.idade);
-    printf("/nPeso: %.2f", p.peso);
-    printf("/nData de Nascimento: %i/%i/%i", d.data, m.mes, a.ano);
+    printf("/nNome: %s", p1.nome);
+    printf("/nIdade: %i", p1.idade);
+    printf("/nPeso: %.2f", p1.peso);
+    printf("/nData de Nascimento: %i/%i/%i", p1.data, p1.mes, p1.ano);
 
 
     return 0;
