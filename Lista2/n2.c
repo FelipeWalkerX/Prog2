@@ -9,11 +9,11 @@ posição de B é a soma dos números daquela coluna da matriz.*/
 
 int* somarColunas(int** matriz, int N){     //matriz precisa de um ponteiro pra ponteiro (pois o ponteiro das linhas ficam dentro do das colunas)
 
-int *vetorB = (int*) malloc(200);
+int* vetorB = (int*) malloc(200);
 
-if(vetorB == NULL){`
+if(vetorB == NULL){
     printf("Deu bosta!");   //Erro ao alocar na memoria
-    return NULL;
+    exit(1);
 }
 
     for(int i = 0; i < N; i++){
@@ -23,23 +23,39 @@ if(vetorB == NULL){`
 
     for(int i = 0; i < N; i++){
         for(int j = 0; j < N; j++)
-            vetorB[j] = vetorB[j] + matriz[i][j];
+            vetorB[j] += matriz[i][j];
     }
     return vetorB;
 }
 
 int main(){
 
-    int N = 2;      //tamanho da matriz
+    int N = 3;      //tamanho da matriz
 
-    int **matriz = (int**)malloc(200)
+    int** matriz = (int**) malloc(200);
 
     for(int i = 0; i < N; i++){
-        matriz[i] = (int*)malloc(100)
+        matriz[i] = (int*) malloc(200);
     }
 
-    int valorMatriz = 1
-    for
+    int valorMatriz = 1;
+    for (int i = 0; i < N; i++){
+        for(int j = 0; j < N; j++){
+            matriz[i][j] = valorMatriz++;
+        }
+    }
+    int* resultado = somarColunas(matriz, N);
 
+    printf("Soma das colunas:\n");
+    for (int i = 0; i < N; i++) {
+        printf("%d ", resultado[i]);
+    }
+
+    for (int i = 0; i < N; i++) {
+        free(matriz[i]);
+    }
+    free(matriz);
+    free(resultado);
+    
     return 0;
 }
