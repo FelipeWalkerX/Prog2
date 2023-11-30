@@ -1,7 +1,4 @@
-/*2) Escreva uma função que receba como parâmetro uma matriz
-A contendo N linhas e N colunas. A função deve retornar o
-ponteiro para um vetor B de tamanho N alocado dinamicamente,
-em que cada posição de B é a soma dos números daquela coluna da matriz.*/
+
 
 
 #include<stdio.h>
